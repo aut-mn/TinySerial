@@ -25,6 +25,9 @@ You can run the program with the following command:
 ./TinySerial
 ```
 
+
+To exit when monitoring a port, type `q!` and press `Enter`.
+
 The program accepts the following command line arguments:
 
 | Flag | Description              | Default Value |

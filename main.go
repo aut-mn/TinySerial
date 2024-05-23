@@ -89,6 +89,12 @@ func main() {
 		case <-quit:
 			return
 		default:
+			input := bufio.NewReader(os.Stdin)
+			readInput, _ := input.ReadString('\n')
+			if readInput == "q!" {
+				return
+			}
+			_, _ = port.Write([]byte(readInput))
 			n, err := port.Read(buf)
 			if err != nil {
 				fmt.Println("Error reading from port: ", err)
